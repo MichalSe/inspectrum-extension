@@ -1,0 +1,39 @@
+{
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' https://use.fontawesome.com https://www.w3schools.com; object-src 'self'",
+  "name": "Inspectrum",
+  "description": "This extension shows a Google Image search result for the current page",
+  "version": "1.0",
+  "devtools_page": "devtools.html",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1x1XQ4O+4uVqNndLADiXAzz090ce/xeH+Gr/4uCuQxQHTAxkghYqp+RGGDbxxsLrCZu6wFoIQocA9QV0CRTy6G6jIot8Hyhb1wUh1sa4foUhkcLLKFQdmAqckzAyI/dIIg1yDeFXvtxz/mytQNDEHlhg/AnupFslIAx2GtoFQ+Ab/5O7bSRmn1ktgCDFGlMrRSimEETIyTKBQTH3q9IlvIujihdDtKlAaz7qI9oAXPzLRtg7ZuFdKYI71iiB0RKc88d9qJM8IG0qs06KN4jlMHrF3CFFJqLahZzQV5Kge+eDtSNOzTxMVNoMOsWCyhgR8SRh5+VkVpiPK5BUC2aRuwIDAQAB",
+  "background":{
+  //  "page": "background.html",
+     "scripts": ["background.js", "bundle.js"]
+    // "persistent": false
+  },
+   "content_scripts": [
+    {
+     "matches": ["<all_urls>"],
+     "js": ["bundle.js", "scripts/underscore.js", "contentScript.js"]
+    }
+  ],
+  "web_accessible_resources": [
+        "stylesheets/export.css", "stylesheets/inspectrum.css", "icons/icon-active.png", "viewchanges.html"
+  ],
+  "browser_action": {
+    "default_icon": "icons/icon-inactive.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "debugger",
+    "background",
+    "tabs",
+    "storage",
+    "<all_urls>",
+    "webNavigation",
+    "cookies",
+    "webRequest",
+    "webRequestBlocking"
+  ]
+}
