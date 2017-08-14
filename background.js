@@ -47,7 +47,7 @@ chrome.runtime.onMessage.addListener(
         case "close":
             chrome.tabs.executeScript({
                 code:
-                'localStorage.setItem("toggle", "");'
+                'localStorage.setItem("toggle_inspectrum", "false");'
             });
             chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
                 chrome.browserAction.setIcon({
@@ -66,7 +66,7 @@ chrome.runtime.onMessage.addListener(
             });
             break;
           case "cookie":
-              chrome.cookies.get({"url": siteUrl,"name": "csrftoken"}, function(cookie) {
+              chrome.cookies.get({"url": siteUrl, "name": "csrftoken"}, function(cookie) {
                   sendResponse({token: cookie.value});
               });
                return true;
@@ -101,7 +101,7 @@ function updateModifiedResource(request){
                chrome.tabs.sendMessage(tabs[0].id, {name: 'apply'}, function (response) {
              });
           });
-      });
+    });
 }
 
 function removeCss() {

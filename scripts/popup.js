@@ -17,8 +17,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     var state = stateMarkup('default');
                     $('.js-stateList').append(state);
                 }
-                if (response.toggle) {
-                    previousState = $('*[data-state="' + response.toggle + '"]').prop('checked', true);
+                if (response.toggle == "true") {
+                    previousState = $('*[data-state="' + response.id + '"]').prop('checked', true);
                      $('.js-underToggleText').html("Inspectrum is recording...")
                 } else {
                     $('.js-underToggleText').html("Turned Off")

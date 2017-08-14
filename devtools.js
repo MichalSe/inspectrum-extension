@@ -48,13 +48,13 @@ function evalSelectedElem(){
 window.addEventListener('load', function() {
     getPageResources();
     listenToResourceChange();
-    evalSelectedElem();
+   // evalSelectedElem();
     elementsPanel();
     //listenToElementsPanel();
 }, false);
 
 
-window.addEventListener('beforeunload', evalSelectedElem);
+document.addEventListener('DOMContentLoaded', evalSelectedElem);
 
 var port = chrome.runtime.connect({name: "knockknock"});
 
