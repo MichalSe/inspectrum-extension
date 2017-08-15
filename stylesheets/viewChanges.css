@@ -23,7 +23,7 @@ pre, code {
     text-align: center;
 	color: #4B4B4B;
 	font-family: "Lucida Grande";
-	font-size: 20px;
+	font-size: 22px;
 	font-weight: bold;
 	line-height: 23px;
     margin-bottom: 15px;
@@ -98,14 +98,12 @@ pre, code {
     top: 24px;
 }
 .logoContainer {
-    position: relative;
     text-align: center;
-    margin-top: 28px;
+    margin-top: 20px;
 }
 
 img {
-    vertical-align: middle;
-    width: 32px;
+    width: 250px;
 }
 
 .domain:before {
