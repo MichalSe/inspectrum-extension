@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "content_security_policy": "script-src 'self' https://cdn.jsdelivr.net https://use.fontawesome.com https://www.w3schools.com https://static.inspectrumapp.com; object-src 'self'",
   "name": "Inspectrum",
-  "description": "This extension shows a Google Image search result for the current page",
+  "description": "Edit and save your style changes with Inspectrum",
   "version": "1.0",
   "devtools_page": "devtools.html",
   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1x1XQ4O+4uVqNndLADiXAzz090ce/xeH+Gr/4uCuQxQHTAxkghYqp+RGGDbxxsLrCZu6wFoIQocA9QV0CRTy6G6jIot8Hyhb1wUh1sa4foUhkcLLKFQdmAqckzAyI/dIIg1yDeFXvtxz/mytQNDEHlhg/AnupFslIAx2GtoFQ+Ab/5O7bSRmn1ktgCDFGlMrRSimEETIyTKBQTH3q9IlvIujihdDtKlAaz7qI9oAXPzLRtg7ZuFdKYI71iiB0RKc88d9qJM8IG0qs06KN4jlMHrF3CFFJqLahZzQV5Kge+eDtSNOzTxMVNoMOsWCyhgR8SRh5+VkVpiPK5BUC2aRuwIDAQAB",
@@ -38,5 +38,8 @@
     "webRequest",
     "webRequestBlocking",
     "unlimitedStorage"
-  ]
+  ],
+  "icons": { "16": "icons/icon-active.png",
+          "128": "icons/icon-active128.png"
+  }
 }
