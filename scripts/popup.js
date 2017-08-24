@@ -1,7 +1,7 @@
 
 
 document.addEventListener('DOMContentLoaded', function() {
-
+    $('.js-check').hide();
     //loading toggle state
     var previousState = null;
     chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
@@ -88,6 +88,10 @@ document.addEventListener('DOMContentLoaded', function() {
         chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
             //chrome.tabs.sendMessage(tabs[0].id, {name: "clearState", id: stateInput.data('state')}, function (response) {
             chrome.tabs.sendMessage(tabs[0].id, {name: "clearState", id: $('.js-toggleState').data('state')}, function (response) {
+                 $('.js-check').show();
+                 setTimeout(function() {
+                    $('.js-check').hide();
+                }, 3000);
             });
         });
     });

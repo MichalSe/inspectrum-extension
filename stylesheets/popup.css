@@ -122,6 +122,7 @@ input:checked + .slider:before {
     color: #3775DC;
 }
 .reset {
+    position: relative;
     height: 29px;
     color: #3B3B3B;
     font-family: "Lucida Grande";
@@ -229,4 +230,20 @@ input:checked + .slider:before {
 a:focus {
   outline: 0;
   border: none;
+}
+
+
+.fa.fa-check-square-o {
+    color: #3775DC;
+    font-size: 14px;
+    opacity: 0;
+    position: absolute;
+    left: 65%;
+    top: 32%;
+    animation: fadeinout 3s linear forwards;
+}
+
+
+@keyframes fadeinout {
+  50% { opacity: 1; }
 }
